@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://cy8oquhgrre81"]
+
+[ext_resource type="Texture2D" uid="uid://u2mgwb5vx0xo" path="res://assets/Fish Sprites.png" id="1_b5pki"]
+[ext_resource type="Script" uid="uid://b7rtheps1pjm7" path="res://script/resourse/ItemData.gd" id="1_yeer2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b5pki"]
+atlas = ExtResource("1_b5pki")
+region = Rect2(80, 0, 16, 16)
+
+[resource]
+script = ExtResource("1_yeer2")
+item_name = "perch"
+icon = SubResource("AtlasTexture_b5pki")
+metadata/_custom_type_script = "uid://b7rtheps1pjm7"

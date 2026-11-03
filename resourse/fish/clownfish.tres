@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://ctpu0olt1x8rw"]
+
+[ext_resource type="Script" uid="uid://b7rtheps1pjm7" path="res://script/resourse/ItemData.gd" id="1_e3hqd"]
+[ext_resource type="Texture2D" uid="uid://u2mgwb5vx0xo" path="res://assets/Fish Sprites.png" id="1_xir67"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xir67"]
+atlas = ExtResource("1_xir67")
+region = Rect2(33, 49, 13, 14)
+
+[resource]
+script = ExtResource("1_e3hqd")
+item_name = "clownfish"
+icon = SubResource("AtlasTexture_xir67")
+metadata/_custom_type_script = "uid://b7rtheps1pjm7"

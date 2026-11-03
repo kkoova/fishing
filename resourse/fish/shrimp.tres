@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://hskx27pkhfh6"]
+
+[ext_resource type="Texture2D" uid="uid://u2mgwb5vx0xo" path="res://assets/Fish Sprites.png" id="1_5pccr"]
+[ext_resource type="Script" uid="uid://b7rtheps1pjm7" path="res://script/resourse/ItemData.gd" id="1_25a21"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vgcoi"]
+atlas = ExtResource("1_5pccr")
+region = Rect2(2, 17, 13, 14)
+
+[resource]
+script = ExtResource("1_25a21")
+item_name = "shrimp"
+icon = SubResource("AtlasTexture_vgcoi")
+metadata/_custom_type_script = "uid://b7rtheps1pjm7"

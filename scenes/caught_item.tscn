@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://cgu6nwbryr2ia"]
+
+[ext_resource type="Script" uid="uid://bgycu2purgb48" path="res://script/caught_item.gd" id="1_jii13"]
+
+[node name="CaughtItem" type="Sprite2D" unique_id=1398619229]
+script = ExtResource("1_jii13")

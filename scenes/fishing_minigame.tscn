@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://dhlxnm2os4w6s"]
+
+[ext_resource type="Script" uid="uid://d0n04egr74j83" path="res://script/fishing_minigame.gd" id="1_obc7g"]
+[ext_resource type="Theme" uid="uid://o8xmkolrgdpq" path="res://assets/theme.tres" id="2_45wrr"]
+[ext_resource type="Texture2D" uid="uid://u2mgwb5vx0xo" path="res://assets/Fish Sprites.png" id="3_3qg51"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k8ibd"]
+atlas = ExtResource("3_3qg51")
+region = Rect2(80, 0, 16, 16)
+
+[node name="FishingMinigame" type="CanvasLayer" unique_id=419864293 node_paths=PackedStringArray("green_bar", "fish_icon", "progress_bar")]
+script = ExtResource("1_obc7g")
+green_bar = NodePath("Control/PanelContainer/GreenBar")
+fish_icon = NodePath("Control/PanelContainer/FishIcon")
+progress_bar = NodePath("Control/PanelContainer/ProgressBar")
+
+[node name="Control" type="Control" parent="." unique_id=1577995890]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_45wrr")
+
+[node name="PanelContainer" type="PanelContainer" parent="Control" unique_id=1037510101]
+custom_minimum_size = Vector2(30, 190)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="GreenBar" type="ColorRect" parent="Control/PanelContainer" unique_id=605317773]
+custom_minimum_size = Vector2(25, 40)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+color = Color(0.7453331, 0.8960495, 0.55120975, 1)
+
+[node name="FishIcon" type="TextureRect" parent="Control/PanelContainer" unique_id=1020348876]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = SubResource("AtlasTexture_k8ibd")
+
+[node name="ProgressBar" type="ProgressBar" parent="Control/PanelContainer" unique_id=1334881056]
+layout_mode = 2
+show_percentage = false

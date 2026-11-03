@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://b5g8rhqicdf4s"]
+
+[ext_resource type="Script" uid="uid://b7rtheps1pjm7" path="res://script/resourse/ItemData.gd" id="1_vnebt"]
+[ext_resource type="Texture2D" uid="uid://u2mgwb5vx0xo" path="res://assets/Fish Sprites.png" id="1_y0jpw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y0jpw"]
+atlas = ExtResource("1_y0jpw")
+region = Rect2(99, 3, 11, 11)
+
+[resource]
+script = ExtResource("1_vnebt")
+item_name = "fry"
+icon = SubResource("AtlasTexture_y0jpw")
+metadata/_custom_type_script = "uid://b7rtheps1pjm7"
