@@ -84,6 +84,7 @@ offset_left = 5.0
 offset_top = 5.0
 offset_right = 475.0
 offset_bottom = 265.0
+scale = Vector2(1.5, 1.5)
 theme = ExtResource("2_hu88u")
 
 [node name="Day_texture" type="TextureRect" parent="Control" unique_id=1077173731]

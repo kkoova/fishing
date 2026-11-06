@@ -6,21 +6,20 @@ static var all_items: Array[ItemData] = []
 func _ready() -> void:
 	_load_all_resources()
 
-static func _load_all_resources() -> void:
+# fishing_database.gd
+
+func _load_all_resources() -> void:
 	var dir_path = "res://resources/fish/"
-	var dir = DirAccess.open(dir_path)
 	
-	if dir:
-		dir.list_dir_begin()
-		var file_name = dir.get_next()
-		
-		while file_name != "":
-			if not dir.current_is_dir() and file_name.ends_with(".tres"):
-				var item: ItemData = load(dir_path + file_name)
-				if item:
-					all_items.append(item)
-			file_name = dir.get_next()
-			
+	var file_list = ResourceLoader.list_directory(dir_path)
+	
+	for file_name in file_list:
+		if file_name.ends_with(".tres"):
+			var full_path = dir_path.path_join(file_name)
+			var item: ItemData = load(full_path)
+			if item:
+				all_items.append(item)
+				
 	print("Загружено предметов для рыбалки: ", all_items.size())
 
 # ГЛАВНАЯ ФУНКЦИЯ: Выбор рыбы с учетом времени и веса

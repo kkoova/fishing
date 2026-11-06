@@ -11,5 +11,4 @@ region = Rect2(99, 3, 11, 11)
 script = ExtResource("1_vnebt")
 item_name = "fry"
 icon = SubResource("AtlasTexture_y0jpw")
-allowed_time_periods = Array[String](["6", "7", "8", "9"])
 metadata/_custom_type_script = "uid://b7rtheps1pjm7"

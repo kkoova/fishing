@@ -85,4 +85,4 @@ func _change_state(new_state: NodeState) -> void:
 
 	current_node_state._on_enter()
 
-	print("Current State: ", current_node_state_name)
+	# print("Current State: ", current_node_state_name)
