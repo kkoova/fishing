@@ -29,7 +29,7 @@ static func get_random_catch() -> ItemData:
 	var total_weight: float = 0.0
 	
 	for item in all_items:
-		if item.allowed_time_periods.is_empty() or GameTimeManager.current_period in item.allowed_time_periods:
+		if item.allowed_time_periods.is_empty() or DayAndNightCycleManager.initial_hour in item.allowed_time_periods:
 			valid_items.append(item)
 			total_weight += item.drop_weight
 			

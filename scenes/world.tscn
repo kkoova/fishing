@@ -3,6 +3,9 @@
 [ext_resource type="TileSet" uid="uid://c33dqb3c8ifc6" path="res://assets/new_tile_set.tres" id="1_rwgxs"]
 [ext_resource type="PackedScene" uid="uid://byo3e44s0r14n" path="res://scenes/player/player.tscn" id="2_4wyf3"]
 [ext_resource type="Script" uid="uid://bhix0mt71b3fi" path="res://script/game_fishing_database.gd" id="3_4wyf3"]
+[ext_resource type="Script" uid="uid://ddwtewfihwbr7" path="res://script/day_night_cycle_component.gd" id="4_k0juu"]
+[ext_resource type="Texture2D" uid="uid://b114xubpccudj" path="res://assets/new_gradient_texture_1d.tres" id="5_qfnet"]
+[ext_resource type="PackedScene" uid="uid://bbt3clidf6ruv" path="res://scenes/time_panel.tscn" id="6_i7141"]
 
 [node name="World" type="Node2D" unique_id=978950356]
 y_sort_enabled = true
@@ -24,7 +27,11 @@ tile_set = ExtResource("1_rwgxs")
 y_sort_enabled = true
 position = Vector2(129, 120)
 
-[node name="DayNightCycle" type="CanvasLayer" parent="." unique_id=357081416]
-
 [node name="GameFishingDatabase" type="Node" parent="." unique_id=1024688372]
 script = ExtResource("3_4wyf3")
+
+[node name="DayNightCycleComponent" type="CanvasModulate" parent="." unique_id=143789090]
+script = ExtResource("4_k0juu")
+day_and_night_gradient_texture = ExtResource("5_qfnet")
+
+[node name="TimePanel" parent="." unique_id=1550479731 instance=ExtResource("6_i7141")]

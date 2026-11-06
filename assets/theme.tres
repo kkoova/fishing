@@ -1,6 +1,7 @@
 [gd_resource type="Theme" format=3 uid="uid://o8xmkolrgdpq"]
 
 [ext_resource type="Texture2D" uid="uid://6jk8e3lrck36" path="res://assets/Sprite sheet for Basic Pack.png" id="1_wl1kw"]
+[ext_resource type="FontFile" uid="uid://bbv8y0gjudlbv" path="res://assets/ComicoroRu_0.ttf" id="2_wl1kw"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_tefeu"]
 load_path = "res://.godot/imported/Sprite sheet for Basic Pack.png-eabe7b01c3a789601ffb6404d896cf0e.ctex"
@@ -101,6 +102,18 @@ region = Rect2(645, 68, 22, 24)
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jyhfs"]
 texture = SubResource("AtlasTexture_sugp2")
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_k8ibd"]
+atlas = ExtResource("1_wl1kw")
+region = Rect2(201, 57, 30, 30)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3qg51"]
+texture = SubResource("AtlasTexture_k8ibd")
+texture_margin_left = 7.0
+texture_margin_top = 7.0
+texture_margin_right = 7.0
+texture_margin_bottom = 7.0
+region_rect = Rect2(0, 0, 30, 30)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_1trbs"]
 atlas = ExtResource("1_wl1kw")
 region = Rect2(201, 105, 30, 30)
@@ -157,6 +170,7 @@ texture_margin_right = 6.0
 texture_margin_bottom = 5.0
 
 [resource]
+default_font = ExtResource("2_wl1kw")
 Button/styles/disabled = SubResource("StyleBoxTexture_tipki")
 Button/styles/focus = SubResource("StyleBoxTexture_trceg")
 Button/styles/hover = SubResource("StyleBoxTexture_tefeu")
@@ -176,6 +190,7 @@ MenuExitButton/styles/focus = SubResource("StyleBoxTexture_o6xl0")
 MenuExitButton/styles/hover = SubResource("StyleBoxTexture_o6xl0")
 MenuExitButton/styles/normal = SubResource("StyleBoxTexture_jyhfs")
 MenuExitButton/styles/pressed = SubResource("StyleBoxTexture_o6xl0")
+Panel/styles/panel = SubResource("StyleBoxTexture_3qg51")
 PanelContainer/styles/panel = SubResource("StyleBoxTexture_r7sum")
 ShopButton/base_type = &"Button"
 ShopButton/styles/focus = SubResource("StyleBoxTexture_choun")

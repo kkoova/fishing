@@ -11,4 +11,5 @@ region = Rect2(33, 49, 13, 14)
 script = ExtResource("1_e3hqd")
 item_name = "clownfish"
 icon = SubResource("AtlasTexture_xir67")
+allowed_time_periods = Array[String](["15", "16", "23", "24"])
 metadata/_custom_type_script = "uid://b7rtheps1pjm7"
