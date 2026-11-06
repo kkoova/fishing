@@ -1,5 +1,5 @@
 class_name PlayerVisuals
-extends Node
+extends CanvasLayer
 
 @export var bite_indicator: Sprite2D
 @export var bite_audio: AudioStreamPlayer
