@@ -1,19 +1,20 @@
 [gd_scene format=3 uid="uid://byo3e44s0r14n"]
 
-[ext_resource type="Script" uid="uid://1mxju2mhtd5h" path="res://scenes/player/player.gd" id="1_75vfm"]
-[ext_resource type="Texture2D" uid="uid://c4o0q08oduouq" path="res://assets/fishing animation front.png" id="1_lvxji"]
-[ext_resource type="PackedScene" uid="uid://cgu6nwbryr2ia" path="res://scenes/caught_item.tscn" id="2_h17s1"]
-[ext_resource type="Texture2D" uid="uid://ce3jyjeth44o3" path="res://assets/Basic Charakter Spritesheet.png" id="2_p47bc"]
+[ext_resource type="Script" uid="uid://1mxju2mhtd5h" path="res://script/entities/player/player.gd" id="1_75vfm"]
+[ext_resource type="Texture2D" uid="uid://c4o0q08oduouq" path="res://assets/characters/cat_fishing_animation_front.png" id="1_lvxji"]
+[ext_resource type="PackedScene" uid="uid://cgu6nwbryr2ia" path="res://scenes/ui/caught_item.tscn" id="2_h17s1"]
+[ext_resource type="Texture2D" uid="uid://ce3jyjeth44o3" path="res://assets/characters/cat_walk_and_idle.png" id="2_p47bc"]
 [ext_resource type="Script" uid="uid://e8r3wvvudd8i" path="res://script/state_machine/node_state_machine.gd" id="3_75vfm"]
-[ext_resource type="Script" uid="uid://dpe5wfqkhvqss" path="res://scenes/player/idle_state.gd" id="4_0owmy"]
-[ext_resource type="Texture2D" uid="uid://pagv3etk2v0s" path="res://assets/fishing animation back.png" id="4_fcs02"]
-[ext_resource type="Texture2D" uid="uid://xwcw5arfxgmv" path="res://assets/fishing animation side.png" id="4_ugbui"]
-[ext_resource type="Script" uid="uid://cgjmbw6qyvm3h" path="res://scenes/player/walk_state.gd" id="5_p47bc"]
-[ext_resource type="Script" uid="uid://dsepj8cfqb7es" path="res://scenes/player/fishing_start_state.gd" id="7_0owmy"]
-[ext_resource type="Script" uid="uid://c2ylucpiqsuf0" path="res://scenes/player/fishing_wait_state.gd" id="8_qek5x"]
-[ext_resource type="Script" uid="uid://bi5l6ekop4k5t" path="res://scenes/player/fishing_catch_state.gd" id="9_5gtgg"]
-[ext_resource type="Script" uid="uid://nly3chbn1sfu" path="res://scenes/player/fishing_game_state.gd" id="11_je7p5"]
-[ext_resource type="PackedScene" uid="uid://dhlxnm2os4w6s" path="res://scenes/fishing_minigame.tscn" id="12_fm80t"]
+[ext_resource type="Script" uid="uid://dpe5wfqkhvqss" path="res://script/entities/player/idle_state.gd" id="4_0owmy"]
+[ext_resource type="Texture2D" uid="uid://pagv3etk2v0s" path="res://assets/characters/cat_fishing_animation_back.png" id="4_fcs02"]
+[ext_resource type="Texture2D" uid="uid://xwcw5arfxgmv" path="res://assets/characters/cat_fishing_animation_side.png" id="4_ugbui"]
+[ext_resource type="Script" uid="uid://cgjmbw6qyvm3h" path="res://script/entities/player/walk_state.gd" id="5_p47bc"]
+[ext_resource type="Script" uid="uid://dsepj8cfqb7es" path="res://script/entities/player/fishing_start_state.gd" id="7_0owmy"]
+[ext_resource type="Script" uid="uid://c2ylucpiqsuf0" path="res://script/entities/player/fishing_wait_state.gd" id="8_qek5x"]
+[ext_resource type="Script" uid="uid://bi5l6ekop4k5t" path="res://script/entities/player/fishing_catch_state.gd" id="9_5gtgg"]
+[ext_resource type="Script" uid="uid://nly3chbn1sfu" path="res://script/entities/player/fishing_game_state.gd" id="11_je7p5"]
+[ext_resource type="PackedScene" uid="uid://b8o0elq46jqyw" path="res://scenes/ui/bobber.tscn" id="11_myrg7"]
+[ext_resource type="PackedScene" uid="uid://dhlxnm2os4w6s" path="res://scenes/fishing/fishing_minigame.tscn" id="12_fm80t"]
 [ext_resource type="PackedScene" uid="uid://jrs4ghxruypw" path="res://scenes/player/player_visuals.tscn" id="13_gx1jg"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_q3xpp"]
@@ -694,7 +695,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_hdu4s")
 }],
-"loop": 0,
+"loop": 1,
 "name": &"fishing_idle_back",
 "speed": 5.0
 }, {
@@ -750,7 +751,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_iqsei")
 }],
-"loop": 0,
+"loop": 1,
 "name": &"fishing_idle_front",
 "speed": 5.0
 }, {
@@ -1098,7 +1099,7 @@ scale = Vector2(0.625, 0.625)
 position = Vector2(0, -1.000001)
 scale = Vector2(0.99999994, 0.99999994)
 sprite_frames = SubResource("SpriteFrames_r7sum")
-animation = &"fishing_end_back"
+animation = &"idle_front"
 autoplay = "idle_front"
 
 [node name="StateMachine" type="Node" parent="." unique_id=930372636 node_paths=PackedStringArray("initial_node_state")]
@@ -1119,6 +1120,7 @@ animated_sprite = NodePath("../../AnimatedSprite2D")
 script = ExtResource("7_0owmy")
 player = NodePath("../..")
 animated_sprite = NodePath("../../AnimatedSprite2D")
+bobber_scene = ExtResource("11_myrg7")
 
 [node name="FishingWait" type="Node" parent="StateMachine" unique_id=2144056873 node_paths=PackedStringArray("player", "animated_sprite")]
 script = ExtResource("8_qek5x")

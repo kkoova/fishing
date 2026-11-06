@@ -1,23 +1,25 @@
 [gd_scene format=3 uid="uid://jrs4ghxruypw"]
 
-[ext_resource type="Script" uid="uid://ko5ibmewvasa" path="res://scenes/player/player_visuals.gd" id="1_0g03g"]
-[ext_resource type="Texture2D" uid="uid://6jk8e3lrck36" path="res://assets/Sprite sheet for Basic Pack.png" id="1_qy2ae"]
-[ext_resource type="AudioStream" uid="uid://dbr6wjjf5fhul" path="res://assets/squick_1.wav" id="3_dmroa"]
+[ext_resource type="Script" uid="uid://ko5ibmewvasa" path="res://script/entities/player/player_visuals.gd" id="1_0g03g"]
+[ext_resource type="Texture2D" uid="uid://6jk8e3lrck36" path="res://assets/ui/sprite.png" id="1_qy2ae"]
+[ext_resource type="AudioStream" uid="uid://dbr6wjjf5fhul" path="res://assets/audio/squick.wav" id="3_dmroa"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_q3xpp"]
 atlas = ExtResource("1_qy2ae")
 region = Rect2(614, 209, 4, 14)
 
-[node name="PlayerVisuals" type="CanvasLayer" unique_id=1604521470 node_paths=PackedStringArray("bite_indicator", "bite_audio")]
+[node name="PlayerVisuals" type="Node2D" unique_id=2009175669 node_paths=PackedStringArray("bite_indicator", "bite_audio")]
 script = ExtResource("1_0g03g")
 bite_indicator = NodePath("BiteIndicator")
 bite_audio = NodePath("BiteAudio")
 
 [node name="BiteIndicator" type="Sprite2D" parent="." unique_id=647718111]
+visible = false
+modulate = Color(1, 0.17184411, 0.24269372, 1)
 z_index = 4
 y_sort_enabled = true
-position = Vector2(8, -11)
-scale = Vector2(0.5, 0.5)
+position = Vector2(7.25, -10.625)
+scale = Vector2(0.375, 0.3392857)
 texture = SubResource("AtlasTexture_q3xpp")
 
 [node name="BiteAudio" type="AudioStreamPlayer" parent="." unique_id=395430991]

@@ -1,0 +1,173 @@
+[gd_scene format=3 uid="uid://bbt3clidf6ruv"]
+
+[ext_resource type="Script" uid="uid://d1ub3s8nv4lda" path="res://script/ui/time_panel.gd" id="1_ryvhp"]
+[ext_resource type="Theme" uid="uid://o8xmkolrgdpq" path="res://assets/ui/theme.tres" id="2_hu88u"]
+[ext_resource type="Texture2D" uid="uid://j2hbgfu0a70g" path="res://assets/ui/weather_ui.png" id="3_hu88u"]
+[ext_resource type="Texture2D" uid="uid://c1rrrxoshms2j" path="res://assets/ui/weather_icons.png" id="4_lyily"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_186xs"]
+load_path = "res://.godot/imported/weather_icons.png-5c188123dac448aceff58b0afc6d5e9c.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5erw5"]
+atlas = SubResource("CompressedTexture2D_186xs")
+region = Rect2(7, 7, 18, 17)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_o0bw4"]
+load_path = "res://.godot/imported/weather_icons.png-5c188123dac448aceff58b0afc6d5e9c.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_npnhf"]
+atlas = SubResource("CompressedTexture2D_o0bw4")
+region = Rect2(7, 71, 18, 17)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_lyily"]
+load_path = "res://.godot/imported/weather_icons.png-5c188123dac448aceff58b0afc6d5e9c.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_186xs"]
+atlas = SubResource("CompressedTexture2D_lyily")
+region = Rect2(7, 39, 18, 17)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_5erw5"]
+load_path = "res://.godot/imported/weather_ui.png-fe5fd5b6f9de6b6c30d8f3d2eeb4e012.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o0bw4"]
+atlas = SubResource("CompressedTexture2D_5erw5")
+region = Rect2(4, 68, 10, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lyily"]
+atlas = ExtResource("3_hu88u")
+region = Rect2(4, 81, 10, 17)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_npnhf"]
+load_path = "res://.godot/imported/weather_ui.png-fe5fd5b6f9de6b6c30d8f3d2eeb4e012.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b1ct6"]
+atlas = SubResource("CompressedTexture2D_npnhf")
+region = Rect2(4, 93, 10, 16)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_b1ct6"]
+load_path = "res://.godot/imported/weather_ui.png-fe5fd5b6f9de6b6c30d8f3d2eeb4e012.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7ps4p"]
+atlas = SubResource("CompressedTexture2D_b1ct6")
+region = Rect2(7, 40, 47, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q3xpp"]
+atlas = ExtResource("3_hu88u")
+region = Rect2(7, 7, 64, 54)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r7sum"]
+atlas = ExtResource("4_lyily")
+region = Rect2(7, 7, 18, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xv3ac"]
+atlas = ExtResource("3_hu88u")
+region = Rect2(17, 71, 13, 17)
+
+[node name="TimePanel" type="CanvasLayer" unique_id=1550479731 node_paths=PackedStringArray("icon", "cursor", "track", "day_label", "time_label")]
+script = ExtResource("1_ryvhp")
+icon = NodePath("Control/Track/Icon")
+cursor = NodePath("Control/Track/Cursor")
+track = NodePath("Control/Track")
+day_label = NodePath("Control/DayLabel")
+time_label = NodePath("Control/TimeLabel")
+day_textures = SubResource("AtlasTexture_5erw5")
+evening_textures = SubResource("AtlasTexture_npnhf")
+night_textures = SubResource("AtlasTexture_186xs")
+cursor_day_textures = SubResource("AtlasTexture_o0bw4")
+cursor_evening_textures = SubResource("AtlasTexture_lyily")
+cursor_night_textures = SubResource("AtlasTexture_b1ct6")
+
+[node name="Control" type="Control" parent="." unique_id=1843352796]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 475.0
+offset_bottom = 265.0
+theme = ExtResource("2_hu88u")
+
+[node name="Day_texture" type="TextureRect" parent="Control" unique_id=1077173731]
+layout_mode = 0
+offset_top = 54.0
+offset_right = 47.0
+offset_bottom = 75.0
+texture = SubResource("AtlasTexture_7ps4p")
+
+[node name="TextureRect" type="TextureRect" parent="Control" unique_id=564482806]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = SubResource("AtlasTexture_q3xpp")
+
+[node name="DayLabel" type="Label" parent="Control" unique_id=179557317]
+layout_mode = 0
+offset_top = 57.0
+offset_right = 47.0
+offset_bottom = 75.0
+text = "день: 1"
+horizontal_alignment = 1
+
+[node name="TimeLabel" type="Label" parent="Control" unique_id=228288990]
+layout_mode = 0
+offset_top = 36.0
+offset_right = 47.0
+offset_bottom = 54.0
+text = "00:00"
+horizontal_alignment = 1
+
+[node name="Track" type="Control" parent="Control" unique_id=936718552]
+anchors_preset = 0
+offset_right = 56.0
+offset_bottom = 33.0
+
+[node name="Icon" type="TextureRect" parent="Control/Track" unique_id=53190688]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 26.0
+offset_bottom = 25.0
+texture = SubResource("AtlasTexture_r7sum")
+
+[node name="Back" type="TextureRect" parent="Control/Track" unique_id=1047106129]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 8.0
+offset_right = 48.0
+offset_bottom = 25.0
+texture = SubResource("AtlasTexture_xv3ac")
+
+[node name="Cursor" type="TextureRect" parent="Control/Track" unique_id=2008588930]
+layout_mode = 0
+offset_left = 37.0
+offset_top = 9.0
+offset_right = 47.0
+offset_bottom = 26.0
+texture = SubResource("AtlasTexture_lyily")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1488159341]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_hu88u")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=795571235]
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer/VBoxContainer" unique_id=1559241726]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/PanelContainer" unique_id=1722036789]
+layout_mode = 2
+text = "00.00"
+horizontal_alignment = 1
+
+[node name="PanelContainer2" type="PanelContainer" parent="MarginContainer/VBoxContainer" unique_id=44498561]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4

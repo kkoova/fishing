@@ -27,6 +27,15 @@ window/size/mode=2
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
+[file_customization]
+
+folder_colors={
+"res://assets/": "yellow",
+"res://resources/": "orange",
+"res://scenes/": "teal",
+"res://script/": "purple"
+}
+
 [input]
 
 interact={

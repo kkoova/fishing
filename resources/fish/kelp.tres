@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://bfydncc6l5a48"]
+
+[ext_resource type="Script" uid="uid://b7rtheps1pjm7" path="res://script/resourse/ItemData.gd" id="1_q07ib"]
+[ext_resource type="Texture2D" uid="uid://u2mgwb5vx0xo" path="res://assets/fish/fish.png" id="1_wuo6c"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wuo6c"]
+atlas = ExtResource("1_wuo6c")
+region = Rect2(65, 32, 14, 16)
+
+[resource]
+script = ExtResource("1_q07ib")
+item_name = "kelp"
+icon = SubResource("AtlasTexture_wuo6c")
+metadata/_custom_type_script = "uid://b7rtheps1pjm7"

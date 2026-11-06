@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://cfywl23ybg2t7"]
+
+[ext_resource type="Texture2D" uid="uid://u2mgwb5vx0xo" path="res://assets/fish/fish.png" id="1_6m6wp"]
+[ext_resource type="Script" uid="uid://b7rtheps1pjm7" path="res://script/resourse/ItemData.gd" id="2_l6i35"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_og0km"]
+atlas = ExtResource("1_6m6wp")
+region = Rect2(129, 32, 15, 16)
+
+[resource]
+script = ExtResource("2_l6i35")
+item_name = "bottle"
+icon = SubResource("AtlasTexture_og0km")
+metadata/_custom_type_script = "uid://b7rtheps1pjm7"
